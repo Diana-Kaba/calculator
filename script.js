@@ -9,7 +9,7 @@ function add() {
   action = "+";
 }
 
-function min() {
+function sub() {
   val1 = +document.getElementById("num").value;
   action = "-";
 }
@@ -26,30 +26,33 @@ function div() {
 
 function calc() {
   val2 = +document.getElementById("num").value;
+  let expr = val1 + action + val2;
+  let res1 = eval(expr);
+  document.getElementById("num").value = res1;
   //   if (action == "+") {
   //     result = val1 + val2;
   //     document.getElementById("num").value = result;
   //   }
   //   let expr = val1 + action + val2;
-  let expr = "";
-  switch (action) {
-    case "+":
-      expr = val1 + action + val2;
-      let res = eval(expr);
-      document.getElementById("num").value = res;
-      break;
-    case "-":
-      expr = val1 + action + val2;
-      let res1 = eval(expr);
-      document.getElementById("num").value = res1;
-      case "x":
-      expr = val1 + action + val2;
-      let res2 = eval(expr);
-      document.getElementById("num").value = res2;
-      break;
-      case "/":
-      expr = val1 + action + val2;
-      let res3 = eval(expr);
-      document.getElementById("num").value = res3;
-  }
+  // let expr = "";
+  // switch (action) {
+  //   case "+":
+  //     expr = val1 + action + val2;
+  //     let res = eval(expr);
+  //     document.getElementById("num").value = res;
+  //     break;
+  //   case "-":
+  //     expr = val1 + action + val2;
+  //     let res1 = eval(expr);
+  //     document.getElementById("num").value = res1;
+  //     case "x":
+  //     expr = val1 + action + val2;
+  //     let res2 = eval(expr);
+  //     document.getElementById("num").value = res2;
+  //     break;
+  //     case "/":
+  //     expr = val1 + action + val2;
+  //     let res3 = eval(expr);
+  //     document.getElementById("num").value = res3;
+  // }
 }
